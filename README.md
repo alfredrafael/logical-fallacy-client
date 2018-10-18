@@ -2,21 +2,21 @@
 
 # Story of the logical-fallacy test
 
-A as a developer who taught elementary and high school, I am fascinated by philosophy, and the ways it can improve our lives. From learning how to frame arguments intelligently, to the way in which we respond to other peoples' points of view, being able to IDENTIFY faults in our own logic (as well as faulty logic in other people's arguments) is a life skill that make our lives richer. By learning the terminology used to refer to common logical fallacies, we become able to IDENTIFY them as soon as they occur (either from others, or even in our own heads) and therefore curve our behavior in a more productive response.
+A as a developer who taught elementary and high school, I am fascinated by philosophy and the ways it can improve our lives. From learning how to frame arguments intelligently, to the way in which we respond to other peoples' points of view, being able to IDENTIFY faults in our own logic (as well as faulty logic in other people's arguments) is a life skill that make our lives richer. By learning the terminology used to refer to common logical fallacies, we become able to IDENTIFY them as soon as they occur (either from others, or even in our own heads) and therefore curve our behavior in a more productive response.
 
 The purpose of this test is to expose the user to these vocabulary words, allowing him/her to identify them in the future. 
 
 
 ## User story
 
-As a user, I can Log in and sign in into my account
-As a user, I can take the test and:
+1. As a user, I can Log in and sign in into my account
+2. As a user, I can take the test and:
     -Quit taking the test at any moment (unanswered questions === 0)
     -Read question and Select an answer from choices provided (for multiple choice options)
     -Type-in answers from questions provided (for “prompt” options)
-As a user, I can see my latest test-score.
-As a user, I can seeeverybody else’s score
-As a user, I can see and click on external resources (external links) to study for the test
+3. As a user, I can see my latest test-score.
+4. As a user, I can seeeverybody else’s score
+5. As a user, I can see and click on external resources (external links) to study for the test
 
 ## WireFrame
 
