@@ -17,6 +17,8 @@
 
   <br />
   <section class="sign-in-out">
+
+
     <div class="login-wrap">
       <div class="login-html">
         <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
@@ -26,8 +28,9 @@
 
           <div class="sign-in-htm">
             <div class="group">
-              <label for="user" class="label">Email</label>
-              <input id="user" type="text" class="input">
+              <form id="sign-in-form">
+                <label for="user" class="label">Email</label>
+                <input id="user" type="text" class="input">
             </div>
             <div class="group">
               <label for="pass" class="label">Password</label>
@@ -37,39 +40,54 @@
 
             </div>
             <div class="group">
-              <input type="submit" class="button" value="Sign In">
+              <button type="submit" id="sign-in-button" class="button" value="Sign In" style="margin-left: 9px"> Sign
+                in </button>
             </div>
+            </form>
+            <h1 id="show-sign-up-message"> </h1>
             <div class="hr"></div>
-            <div class="foot-lnk">
-            </div>
           </div>
+
+
+
           <div class="sign-up-htm">
             <div class="group">
-              <label for="user" class="label">E-mail</label>
-              <input id="user" type="text" placeholder="Enter your email" class="input">
+              <form id="sign-up-form">
+                <fieldset>
+                  <label for="sign-up-email-input" class="label">Email</label>
+                  <input name="credentials[email]" id="sign-up-email-input" type="email" class="input">
             </div>
             <div class="group">
-              <label for="pass" class="label">Password</label>
-              <input id="pass" type="password" class="input" data-type="password">
+              <label for="password-sign-up-input" class="label">Password</label>
+              <input name="credentials[password]" id="password-sign-up-input" type="password" class="input" type="password">
             </div>
             <div class="group">
-              <label for="pass" class="label">Repeat Password</label>
-              <input id="pass" type="password" class="input" data-type="password">
+              <div class="group">
+                <label for="pwd-confirmation-input" class="label">
+                  Confirm Password
+                </label>
+                <input name="credentials[password_confirmation]" id="pwd-confirmation-input" type="password" class="input"
+                  data-type="password">
+              </div>
+              <div class="group">
+              </div>
+              <div class="group">
+                <button type="submit" id="sign-up-button" class="button" value="Sign Up" style="margin-left: 9px"> Sign
+                  up </button>
+              </div>
+              </fieldset>
+              </form>
+              <h1 id="show-sign-in-message"> </h1>
+              <div class="hr"></div>
             </div>
-            <div class="group">
-              <label for="pass" class="label">Email Address</label>
-              <input id="pass" type="text" class="input">
-            </div>
-            <div class="group">
-              <input type="submit" class="button" value="Sign Up">
-            </div>
+
             <div class="hr"></div>
-            <div class="foot-lnk">
-            </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
+
   </section>
 
   <br />
@@ -259,8 +277,8 @@
   <section class="create-example">
     <h1> Feel free to create your own flashcard with an example of a logical fallacy</h1>
 
-    <h1>Nice input box</h1>
-    <form>
+    <h1>Enter your example</h1>
+    <form id="create-example-form">
       <input type="text" name="name" class="question" id="nme" required autocomplete="off" />
       <label for="nme"><span>What is the logical fallacy you chose?</span></label>
       <textarea style="margin-bottom: -25px" name="message" rows="2" class="question" id="msg" required autocomplete="off"></textarea>

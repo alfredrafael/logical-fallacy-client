@@ -1,11 +1,17 @@
 'use strict'
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-
-// use require without a reference to ensure a file is bundled
-// require('./example')
+const eventsFile = require('../authenticationDirectory/eventsFile.js')
+const store = require('./store.js')
 
 $(() => {
-  // your JS code goes here
+  $('#sign-up-button').on('click', eventsFile.onSignUp)
+  //$('#sign-in-button').on('submit', eventsFile.onSignIn)
+
 })
+
+
+// $('#sign-up-button').on('click', function (e) {
+//   e.preventDefault()
+//   alert("button clicked")
+//   console.log('button clicked')
+// })
