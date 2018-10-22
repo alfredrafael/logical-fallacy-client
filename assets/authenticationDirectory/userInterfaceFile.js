@@ -6,6 +6,7 @@ $(() => {
     $('.study-materials').hide()
     $('.about-section').hide()
     $('.create-example').hide()
+    $('.change-password-section').hide()
 })
 
 const signUpUserInterfaceSuccess = () => {
@@ -13,7 +14,6 @@ const signUpUserInterfaceSuccess = () => {
     $('#show-sign-up-message').trigger('reset')
     $("#show-sign-up-message").fadeOut(2000)
     $('#sign-up-form').trigger('reset')
-    //$('#sign-out-button').show()
 }
 
 const signUpUserInterfaceFailure = () => {
@@ -24,13 +24,19 @@ const signUpUserInterfaceFailure = () => {
 }
 
 
-const signInUserInterfaceSuccess = () => {
+const signInUserInterfaceSuccess = (response) => {
+    store.user = response.user
     $('#show-sign-in-message').html('Sign in successful')
     $('#show-sign-in-message').trigger('reset')
     $("#show-sign-in-message").fadeOut(2000)
     $('#sign-in-form').trigger('reset')
     $('.about-section').show()
     $('.sign-in-out').hide()
+
+    $('.study-materials').show()
+    $('.about-section').show()
+    $('.create-example').show()
+    $('.change-password-section').show()
 
 
 }
@@ -44,11 +50,29 @@ const signInUserInterfaceFailure = () => {
 
 const signOutSuccessUserInterface = () => {
     $('.sign-in-out').show()
+    $('.study-materials').hide()
+    $('.about-section').hide()
+    $('.create-example').hide()
 }
 
 const signOutFailureUserInterface = () => {
     $('#sign-out-failed-message').html("Sign out failed")
 }
+
+const onChangePasswordSuccess = () => {
+    $('.display-change-password-status').html("Successful password change!")
+    $('.display-change-password-status').css('color', 'green')
+    $('.display-change-password-status').fadeOut(3000)
+    $('#change-password-form').trigger('reset')
+}
+
+const onChangePasswordFailure = () => {
+    $('.display-change-password-status').html("Successful password change!")
+    $('.display-change-password-status').css('color', 'green')
+    $('.display-change-password-status').fadeOut(3000)
+    $('#change-password-form').trigger('reset')
+}
+
 
 module.exports = {
     signUpUserInterfaceSuccess,
@@ -56,5 +80,7 @@ module.exports = {
     signInUserInterfaceSuccess,
     signInUserInterfaceFailure,
     signOutSuccessUserInterface,
-    signOutFailureUserInterface
+    signOutFailureUserInterface,
+    onChangePasswordSuccess,
+    onChangePasswordFailure
 }

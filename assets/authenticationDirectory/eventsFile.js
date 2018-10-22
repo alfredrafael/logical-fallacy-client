@@ -34,10 +34,20 @@ const onSignOut = function () {
         .catch(userInterfaceFile.signOutFailureUserInterface)
 }
 
+const onChangePassword = function (e) {
+    e.preventDefault()
+
+    const dataInTheForm = getFormFields(event.target)
+    ajaxCallsFile.changePasswordAjaxCall(dataInTheForm)
+        .then(userInterfaceFile.onChangePasswordSuccess)
+        .catch(userInterfaceFile.onChangePasswordFailure)
+}
+
 
 module.exports = {
     onSignUp,
     onSignIn,
-    onSignOut
+    onSignOut,
+    onChangePassword
 }
 

@@ -30,12 +30,23 @@ const signOutAjaxCall = () => {
         },
         method: 'DELETE'
     })
+}
 
+const changePasswordAjaxCall = (passwordDataFromDatabase) => {
+    return $.ajax({
+        url: config.apiUrl + '/change-password',
+        headers: {
+            Authorization: `Token token=${store.user.token}`
+        },
+        method: 'PATCH',
+        data: passwordDataFromDatabase
+    })
 }
 
 module.exports = {
     signUpAjaxCall,
     signInAjaxCall,
-    signOutAjaxCall
+    signOutAjaxCall,
+    changePasswordAjaxCall
 }
 

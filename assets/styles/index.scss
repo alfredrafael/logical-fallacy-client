@@ -14,7 +14,7 @@
  // background: url(http://www.thewallpapers.org/photo/2735/arch,%2520Greek,%2520Corinthian%2520capitals%2520and%2520lintels.jpg) no-repeat center; 
 }
 
-.login-wrap{
+.login-wrap {
 	width:100%;
 	margin:auto;
 	max-width:525px;
@@ -31,6 +31,7 @@
 	padding:90px 70px 50px 70px;
 	background:rgba(42, 61, 109, 0.9);
 }
+
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
 	top:0;
@@ -78,7 +79,7 @@
 	        transform-style:preserve-3d;
 }
 
-.login-form .group{
+.login-form .group {
 	margin-bottom:15px;
 }
 
@@ -441,5 +442,11 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 }
 
 
+///////////////////////////////////////////change password section /////////////////////////
+.change-password-section,
+.about-section,
+.create-example {
+  height: 105vh
+}
 
 // http://www.adam-mcfarland.net/wp-content/uploads/2009/03/blank-index-card.jpg
