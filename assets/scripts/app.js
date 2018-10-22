@@ -4,13 +4,19 @@ const eventsFile = require('../authenticationDirectory/eventsFile.js')
 const store = require('./store.js')
 
 $(() => {
-  $('#sign-up-button').on('click', eventsFile.onSignUp)
-  //$('#sign-in-button').on('submit', eventsFile.onSignIn)
+  $('#sign-up-form').on('submit', eventsFile.onSignUp)
+  $('#sign-in-form').on('submit', eventsFile.onSignIn)
 
 })
 
 
-// $('#sign-up-button').on('click', function (e) {
+
+
+
+
+
+// checking if it fires...
+// $('#sign-up-form').on('submit', function (e) {
 //   e.preventDefault()
 //   alert("button clicked")
 //   console.log('button clicked')

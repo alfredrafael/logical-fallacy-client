@@ -4,6 +4,7 @@
 const config = require('../scripts/config.js')
 
 const signUpAjaxCall = (userDataSent) => {
+    console.log(userDataSent)
     return $.ajax({
         url: config.apiUrl + '/sign-up',
         method: 'POST',
@@ -11,8 +12,17 @@ const signUpAjaxCall = (userDataSent) => {
     })
 }
 
-module.exports = {
-    signUpAjaxCall
+const signInAjaxCall = (userDataSent) => {
+    console.log(userDataSent)
+    return $.ajax({
+        url: config.apiUrl + '/sign-in',
+        method: 'POST',
+        data: userDataSent
+    })
 }
 
+module.exports = {
+    signUpAjaxCall,
+    signInAjaxCall
+}
 

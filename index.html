@@ -16,25 +16,24 @@
 <body>
 
   <br />
+
   <section class="sign-in-out">
-
-
     <div class="login-wrap">
       <div class="login-html">
         <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
         <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+
         <div class="login-form">
-
-
           <div class="sign-in-htm">
             <div class="group">
               <form id="sign-in-form">
-                <label for="user" class="label">Email</label>
-                <input id="user" type="text" class="input">
+                <fieldset>
+                  <label for="sign-in-email-input" class="label">Email</label>
+                  <input name="credentials[email]" id="sign-in-email-input" type="text" class="input">
             </div>
             <div class="group">
-              <label for="pass" class="label">Password</label>
-              <input id="pass" type="password" class="input" data-type="password">
+              <label for="password-sign-in-input" class="label">Password</label>
+              <input name="credentials[password]" id="password-sign-in-input" type="password" class="input" type="password">
             </div>
             <div class="group">
 
@@ -43,9 +42,9 @@
               <button type="submit" id="sign-in-button" class="button" value="Sign In" style="margin-left: 9px"> Sign
                 in </button>
             </div>
+            </fieldset>
             </form>
-            <h1 id="show-sign-up-message"> </h1>
-            <div class="hr"></div>
+            <h1 id="show-sign-in-message"> </h1>
           </div>
 
 
@@ -67,7 +66,7 @@
                   Confirm Password
                 </label>
                 <input name="credentials[password_confirmation]" id="pwd-confirmation-input" type="password" class="input"
-                  data-type="password">
+                  type="password">
               </div>
               <div class="group">
               </div>
@@ -77,17 +76,12 @@
               </div>
               </fieldset>
               </form>
-              <h1 id="show-sign-in-message"> </h1>
-              <div class="hr"></div>
+              <h1 id="show-sign-up-message"> </h1>
             </div>
-
-            <div class="hr"></div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-
   </section>
 
   <br />
