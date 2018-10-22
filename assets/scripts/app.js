@@ -8,7 +8,7 @@ $(() => {
   $('#sign-in-form').on('submit', eventsFile.onSignIn)
   $('#sign-out-button').on('click', eventsFile.onSignOut)
   $('#change-password-form').on('submit', eventsFile.onChangePassword)
-
+  $('#create-example-form').on('submit', eventsFile.onCreateExample)
 })
 
 

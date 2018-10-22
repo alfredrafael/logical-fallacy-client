@@ -43,10 +43,23 @@ const changePasswordAjaxCall = (passwordDataFromDatabase) => {
     })
 }
 
+const createExampleAjaxCall = (usersExample) => {
+    console.log(usersExample)
+    return $.ajax({
+        url: config.apiUrl + '/flash_cards',
+        headers: {
+            Authorization: `Token token=${store.user.token}`
+        },
+        method: 'POST',
+        data: usersExample
+    })
+}
+
 module.exports = {
     signUpAjaxCall,
     signInAjaxCall,
     signOutAjaxCall,
-    changePasswordAjaxCall
+    changePasswordAjaxCall,
+    createExampleAjaxCall
 }
 

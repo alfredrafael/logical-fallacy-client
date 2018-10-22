@@ -2,11 +2,27 @@
 
 const store = require('../scripts/store')
 
+
+// window.onscroll = function() {myFunction()};
+
+// var navbar = document.getElementById("navbar");
+// var sticky = navbar.offsetTop;
+
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }
+
+
 $(() => {
     $('.study-materials').hide()
     $('.about-section').hide()
     $('.create-example').hide()
     $('.change-password-section').hide()
+    
 })
 
 const signUpUserInterfaceSuccess = () => {
@@ -73,6 +89,19 @@ const onChangePasswordFailure = () => {
     $('#change-password-form').trigger('reset')
 }
 
+const onCreateExampleSuccess = () => {
+    $('.display-create-example-status').html("Success at posting your example")
+    $('.display-create-example-status').css('color', 'green')
+    $('.display-create-example-status').fadeOut(3000)
+    $('#create-example-form').trigger('reset')
+} 
+
+const onCreateExampleFailure = () => {
+    $('.display-create-example-status').html("It did not work")
+    $('.display-create-example-status').css('color', 'red')
+    $('.display-create-example-status').fadeOut(3000)
+    $('#create-example-form').trigger('reset')
+} 
 
 module.exports = {
     signUpUserInterfaceSuccess,
@@ -82,5 +111,7 @@ module.exports = {
     signOutSuccessUserInterface,
     signOutFailureUserInterface,
     onChangePasswordSuccess,
-    onChangePasswordFailure
+    onChangePasswordFailure,
+    onCreateExampleSuccess,
+    onCreateExampleFailure
 }

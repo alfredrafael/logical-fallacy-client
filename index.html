@@ -84,7 +84,16 @@
     </div>
   </section>
   <!--////////////////////////////   ABOUT  //////////////////////////////////////////////////////////////////////////////////////-->
-  <section class="about-section" id="about-tab">
+  <section class="about-section">
+
+   <!--
+<div id="navbar">
+    <a class="active" href="javascript:void(0)">Home</a>
+    <a href="javascript:void(0)">News</a>
+    <a href="javascript:void(0)">Contact</a>
+  </div>
+  -->
+    
     <div class=my-nav>
       <nav class="navbar navbar-expand-lg navbar-light" style="background: #1161ee; height: 80px; margin-top: -30px; font-weight: bold">
 
@@ -132,20 +141,25 @@
         </div>
       </nav>
     </div>
+  
 
     <article>
       <h1>Lorem Ipsum</h1>
       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget maximus libero. Fusce in lacinia arcu.
-        Sed erat urna, cursus ac tincidunt et, lobortis vel purus. Integer et feugiat tellus. Duis egestas sollicitudin
-        auctor. Duis elit ligula, pulvinar quis lobortis eget, mattis ultricies quam. Fusce ipsum nisl, cursus maximus
+        Sed erat urna, cursus ac tincidunt et, lobortis vel purus. Integer et feugiat tellus. Duis egestas
+        sollicitudin
+        auctor. Duis elit ligula, pulvinar quis lobortis eget, mattis ultricies quam. Fusce ipsum nisl, cursus
+        maximus
         augue in, egestas fermentum nibh. Pellentesque tempus felis at faucibus commodo. Donec tempor aliquet risus.
         Nunc tempus odio in neque gravida, eu suscipit urna auctor. Cras sodales tempor quam. Nunc consequat molestie
         venenatis. Morbi vel libero malesuada, gravida diam molestie, aliquam nibh. Phasellus semper volutpat ante id
         vehicula. Nullam imperdiet enim eget pellentesque egestas.
 
         Vestibulum eu sollicitudin risus. Quisque sed nunc a nunc pellentesque blandit eu sed risus. Aliquam id arcu
-        eget lorem convallis molestie. Morbi metus ligula, faucibus eleifend pulvinar ac, malesuada eget ante. Quisque
-        eget eleifend elit. Nunc interdum porttitor tellus, dignissim auctor turpis. Sed tristique velit ac vestibulum
+        eget lorem convallis molestie. Morbi metus ligula, faucibus eleifend pulvinar ac, malesuada eget ante.
+        Quisque
+        eget eleifend elit. Nunc interdum porttitor tellus, dignissim auctor turpis. Sed tristique velit ac
+        vestibulum
         imperdiet. Phasellus libero ex, facilisis a lacinia nec, eleifend nec tellus. Fusce ligula urna, venenatis
         vitae aliquam ut, maximus at elit.
 
@@ -160,10 +174,12 @@
         iaculis commodo sem, ut mollis sapien mollis vitae. Integer in purus turpis. In sit amet erat tincidunt,
         condimentum leo eu, suscipit magna. Aliquam fermentum dolor enim, nec iaculis odio lobortis quis. Duis nec
         lectus condimentum, cursus neque sed, scelerisque tellus. Fusce accumsan quam quis vestibulum feugiat.
-        Suspendisse tristique turpis rutrum arcu pretium, et porta justo tempus. Nunc ornare aliquam sapien, in varius
+        Suspendisse tristique turpis rutrum arcu pretium, et porta justo tempus. Nunc ornare aliquam sapien, in
+        varius
         felis commodo ac. Phasellus vehicula, lorem et pharetra accumsan, velit felis vestibulum massa, eu tristique
         nunc arcu non mauris. Fusce quis est porttitor sapien vestibulum rutrum. Mauris quis lorem at magna pharetra
-        interdum a scelerisque metus. Praesent leo libero, molestie vitae porttitor sollicitudin, vulputate eget lorem.
+        interdum a scelerisque metus. Praesent leo libero, molestie vitae porttitor sollicitudin, vulputate eget
+        lorem.
 
       </p>
     </article>
@@ -173,6 +189,7 @@
 
 
   <section class="study-materials" id="study-tab">
+
     <div class=my-nav>
       <nav class="navbar navbar-expand-lg navbar-light" style="background: #1161ee; height: 80px; margin-top: -30px; font-weight: bold">
 
@@ -220,7 +237,6 @@
         </div>
       </nav>
     </div>
-
 
 
 
@@ -400,6 +416,7 @@
 
   <!--////////////////////////Change password /////////////////////////////////////////////////////////-->
   <section class="change-password-section" id="change-password-tab">
+    
     <div class=my-nav>
       <nav class="navbar navbar-expand-lg navbar-light" style="background: #1161ee; height: 80px; margin-top: -30px; font-weight: bold">
 
@@ -446,6 +463,7 @@
     </div>
 
 
+
     <form id="change-password-form" class="form-horizontal">
       <fieldset>
         <legend>Change thy password</legend>
@@ -474,19 +492,6 @@
     </form>
     <h2 class="display-change-password-status"></h2>
 
-    <!--
-    <legend>Change thy password</legend>
-    <div class="form-group">
-      <form id="change-password-form">
-        <fieldset>
-          <legend> Want to change your password? Fill the form below! </legend>
-          <input placeholder="Enter old password" name="passwords[old]" type="password" />
-          <input placeholder="Enter new password" name="passwords[new]" type="password" />
-          <button type="submit" id="change-password-button" value="Change password">Change Password</button>
-        </fieldset>
-      </form>
-      <h2 class="display-change-password-status"></h2>
-    -->
   </section>
 
 
@@ -549,18 +554,17 @@
         <textarea style="margin-bottom: -25px" name="flash_card[fallacy_example]" rows="2" class="question" id="example-input"
           required autocomplete="off"></textarea>
         <label for="example-input"><span>What is your example of that logical fallacy?</span></label>
-
-
-        <input type="submit" value="Submit!" />
+        <br/>
+        <button type="submit" class="btn btn-primary" value="Submit!">Submit!</button>
       </form>
     </div>
-    <h2 class="display-change-password-status"></h2>
+    <h2 class="display-create-example-status"></h2>
     <br />
     <hr />
 
   </section>
-  <!--///////////////////////////////////////////////////////////////////////////////////-->
+  <!--//////////////////////////////Show all cards/////////////////////////////////////////////////////-->
+ 
 
 </body>
-
 </html>

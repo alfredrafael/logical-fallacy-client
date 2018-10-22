@@ -43,11 +43,21 @@ const onChangePassword = function (e) {
         .catch(userInterfaceFile.onChangePasswordFailure)
 }
 
+const onCreateExample = function (e) {
+    e.preventDefault()
+
+    const userExample = getFormFields(event.target)
+    ajaxCallsFile.createExampleAjaxCall(userExample)
+    .then(userInterfaceFile.onCreateExampleSuccess)
+    .catch(userInterfaceFile.onCreateExampleFailure)
+
+}
 
 module.exports = {
     onSignUp,
     onSignIn,
     onSignOut,
-    onChangePassword
+    onChangePassword,
+    onCreateExample
 }
 
