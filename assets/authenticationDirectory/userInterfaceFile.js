@@ -1,9 +1,15 @@
 'use strict'
 
-//const store = require('../scripts/store')
+const store = require('../scripts/store')
+
+$(() => {
+    $('.study-materials').hide()
+    $('.about-section').hide()
+    $('.create-example').hide()
+})
 
 const signUpUserInterfaceSuccess = () => {
-    $('#show-sign-up-message').html('Sign up successful')
+    $('#show-sign-up-message').html('Sign up successful. SIGN IN now')
     $('#show-sign-up-message').trigger('reset')
     $("#show-sign-up-message").fadeOut(2000)
     $('#sign-up-form').trigger('reset')
@@ -23,6 +29,10 @@ const signInUserInterfaceSuccess = () => {
     $('#show-sign-in-message').trigger('reset')
     $("#show-sign-in-message").fadeOut(2000)
     $('#sign-in-form').trigger('reset')
+    $('.about-section').show()
+    $('.sign-in-out').hide()
+
+
 }
 
 const signInUserInterfaceFailure = () => {
@@ -32,10 +42,19 @@ const signInUserInterfaceFailure = () => {
     $('#sign-in-form').trigger('reset')
 }
 
+const signOutSuccessUserInterface = () => {
+    $('.sign-in-out').show()
+}
+
+const signOutFailureUserInterface = () => {
+    $('#sign-out-failed-message').html("Sign out failed")
+}
 
 module.exports = {
     signUpUserInterfaceSuccess,
     signUpUserInterfaceFailure,
     signInUserInterfaceSuccess,
-    signInUserInterfaceFailure
+    signInUserInterfaceFailure,
+    signOutSuccessUserInterface,
+    signOutFailureUserInterface
 }

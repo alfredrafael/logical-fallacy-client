@@ -23,14 +23,21 @@ const onSignIn = function (event) {
     console.log(dataToSend)
     ajaxCallsFile.signInAjaxCall(dataToSend)
         //.then(console.log)
-
         .then(userInterfaceFile.signInUserInterfaceSuccess)
         // .catch(console.log)
         .catch(userInterfaceFile.signInUserInterfaceFailure)
-
 }
+
+const onSignOut = function () {
+    ajaxCallsFile.signOutAjaxCall()
+        .then(userInterfaceFile.signOutSuccessUserInterface)
+        .catch(userInterfaceFile.signOutFailureUserInterface)
+}
+
+
 module.exports = {
     onSignUp,
-    onSignIn
+    onSignIn,
+    onSignOut
 }
 

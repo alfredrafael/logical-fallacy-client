@@ -1,7 +1,8 @@
 'use strict'
 
-// const store = require('../scripts/store.js')
+const store = require('../scripts/store.js')
 const config = require('../scripts/config.js')
+
 
 const signUpAjaxCall = (userDataSent) => {
     console.log(userDataSent)
@@ -21,8 +22,20 @@ const signInAjaxCall = (userDataSent) => {
     })
 }
 
+const signOutAjaxCall = () => {
+    return $.ajax({
+        url: config.apiUrl + '/sign-out',
+        headers: {
+            Authorization: `Token token=${store.user.token}`
+        },
+        method: 'DELETE'
+    })
+
+}
+
 module.exports = {
     signUpAjaxCall,
-    signInAjaxCall
+    signInAjaxCall,
+    signOutAjaxCall
 }
 
