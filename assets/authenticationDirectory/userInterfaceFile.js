@@ -1,7 +1,7 @@
 'use strict'
 
 const store = require('../scripts/store')
-// const dataFromHandlebars = require('/Users/alfredrafael/wdi/projects/project-2-client/assets/scripts/templates/indexCards.handlebars')
+const dataFromHandlebars = require('/Users/alfredrafael/wdi/projects/project-2-client/assets/scripts/templates/indexCards.handlebars')
 
 
 window.onscroll = function () { myFunction() };
@@ -70,6 +70,7 @@ const signOutSuccessUserInterface = () => {
     $('.study-materials').hide()
     $('.about-section').hide()
     $('.create-example').hide()
+    $('.change-password-section').hide()
 }
 
 const signOutFailureUserInterface = () => {
@@ -117,6 +118,8 @@ const onGetAllExamplesUserInterfaceSuccess = (dataFromServer) => {
 }
 
 const onGetAllExamplesUserInterfaceFailure = function () {
+    $('.showing-cards-handlebars').html('Something is not working in the code')
+
 
 }
 
