@@ -55,11 +55,18 @@ const createExampleAjaxCall = (usersExample) => {
     })
 }
 
+const onGetAllExamplesAjaxCall = () => {
+    return $.ajax({
+        url: config.apiUrl + '/flash_cards', //GET
+    })
+}
+
 module.exports = {
     signUpAjaxCall,
     signInAjaxCall,
     signOutAjaxCall,
     changePasswordAjaxCall,
-    createExampleAjaxCall
+    createExampleAjaxCall,
+    onGetAllExamplesAjaxCall
 }
 

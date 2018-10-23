@@ -1,6 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
-
-
+// @import './new-file.scss'
 
 
 //////////////////////////////SIGN IN / SIGN OUT FORM //////////////////////////////////////
@@ -188,7 +187,7 @@
 
 ///////////////////////////// Nav //////////////////////////////////////////////
 
-/*
+
 #navbar {
   overflow: hidden;
   background-color: #333;
@@ -211,8 +210,8 @@
 }
 
 #navbar a.active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: grey;
+  color: blue;
 }
 
 .content {
@@ -229,7 +228,7 @@
   padding-top: 60px;
 }
 
-*/
+
 //////////////////////////////////study cards ///////////////////////////////////////////////////
 
 .study-materials {
@@ -497,3 +496,6 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 .create-example {
   background: url(http://bdfjade.com/data/out/36/5443402-blank-wallpaper.jpg)no-repeat center;
 }
+
+///////////////////see examples ////////////////
+

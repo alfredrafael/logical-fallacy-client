@@ -9,6 +9,7 @@ $(() => {
   $('#sign-out-button').on('click', eventsFile.onSignOut)
   $('#change-password-form').on('submit', eventsFile.onChangePassword)
   $('#create-example-form').on('submit', eventsFile.onCreateExample)
+  $('#see-examples-tab').on('click', eventsFile.onGetAllExamples)
 })
 
 

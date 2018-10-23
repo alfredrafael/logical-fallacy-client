@@ -48,16 +48,44 @@ const onCreateExample = function (e) {
 
     const userExample = getFormFields(event.target)
     ajaxCallsFile.createExampleAjaxCall(userExample)
-    .then(userInterfaceFile.onCreateExampleSuccess)
-    .catch(userInterfaceFile.onCreateExampleFailure)
+        .then(userInterfaceFile.onCreateExampleSuccess)
+        .catch(userInterfaceFile.onCreateExampleFailure)
 
 }
+
+const onGetAllExamples = function (event) {
+    event.preventDefault()
+
+    ajaxCallsFile.onGetAllExamplesAjaxCall()
+        .then(userInterfaceFile.onGetAllExamplesUserInterfaceSuccess)
+        .catch(userInterfaceFile.onGetAllExamplesUserInterfaceFailure)
+}
+
+const onDeleteExample = function (event) {
+    event.preventDefault()
+
+    const flash_card_id = $('event.target').closest('section').data('id')
+
+    if (confirm('Yo! You shuer yu wanna dilit ')) {
+        ajaxCallsFile.onDeleteExample(flash_card_id)
+            .then(() => onGetAllExamples(event))
+            .catch(userInterfaceFile.deleteExampleFailure)
+    }
+}
+
+const addHandleBarComponent = () => {
+    $('showing-cards-handlebars').on('click', 'button', onDeleteExample)
+}
+
+
 
 module.exports = {
     onSignUp,
     onSignIn,
     onSignOut,
     onChangePassword,
-    onCreateExample
+    onCreateExample,
+    onGetAllExamples,
+    addHandleBarComponent
 }
 

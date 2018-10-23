@@ -1,20 +1,21 @@
 'use strict'
 
 const store = require('../scripts/store')
+// const dataFromHandlebars = require('/Users/alfredrafael/wdi/projects/project-2-client/assets/scripts/templates/indexCards.handlebars')
 
 
-// window.onscroll = function() {myFunction()};
+window.onscroll = function () { myFunction() };
 
-// var navbar = document.getElementById("navbar");
-// var sticky = navbar.offsetTop;
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
 
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
 
 
 $(() => {
@@ -22,7 +23,7 @@ $(() => {
     $('.about-section').hide()
     $('.create-example').hide()
     $('.change-password-section').hide()
-    
+
 })
 
 const signUpUserInterfaceSuccess = () => {
@@ -94,14 +95,30 @@ const onCreateExampleSuccess = () => {
     $('.display-create-example-status').css('color', 'green')
     $('.display-create-example-status').fadeOut(3000)
     $('#create-example-form').trigger('reset')
-} 
+}
 
 const onCreateExampleFailure = () => {
     $('.display-create-example-status').html("It did not work")
     $('.display-create-example-status').css('color', 'red')
     $('.display-create-example-status').fadeOut(3000)
     $('#create-example-form').trigger('reset')
-} 
+}
+
+const deleteExampleFailure = () => {
+    $('.display-create-example-status').html("It did not work")
+    $('.display-create-example-status').css('color', 'red')
+    $('.display-create-example-status').fadeOut(3000)
+    $('#create-example-form').trigger('reset')
+}
+
+const onGetAllExamplesUserInterfaceSuccess = (dataFromServer) => {
+    const showExampleCards = dataFromHandlebars({ flash_cards: dataFromServer.flash_cards })
+    $('.showing-cards-handlebars').html(showExampleCards)
+}
+
+const onGetAllExamplesUserInterfaceFailure = function () {
+
+}
 
 module.exports = {
     signUpUserInterfaceSuccess,
@@ -113,5 +130,8 @@ module.exports = {
     onChangePasswordSuccess,
     onChangePasswordFailure,
     onCreateExampleSuccess,
-    onCreateExampleFailure
+    onCreateExampleFailure,
+    deleteExampleFailure,
+    onGetAllExamplesUserInterfaceSuccess,
+    onGetAllExamplesUserInterfaceFailure
 }
