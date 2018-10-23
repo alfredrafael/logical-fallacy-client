@@ -23,7 +23,7 @@ $(() => {
     $('.about-section').hide()
     $('.create-example').hide()
     $('.change-password-section').hide()
-
+    $('.update-example-section').hide()
 })
 
 const signUpUserInterfaceSuccess = () => {
@@ -55,6 +55,9 @@ const signInUserInterfaceSuccess = (response) => {
     $('.create-example').show()
     $('.change-password-section').show()
 
+    $('.show-cards').show()
+
+
 
 }
 
@@ -71,6 +74,8 @@ const signOutSuccessUserInterface = () => {
     $('.about-section').hide()
     $('.create-example').hide()
     $('.change-password-section').hide()
+    $('.show-cards').hide()
+
 }
 
 const signOutFailureUserInterface = () => {
@@ -115,13 +120,15 @@ const deleteExampleFailure = () => {
 const onGetAllExamplesUserInterfaceSuccess = (dataFromServer) => {
     const showExampleCards = dataFromHandlebars({ flash_cards: dataFromServer.flash_cards })
     $('.showing-cards-handlebars').html(showExampleCards)
+    // $('.showing-cards-handlebars').html('You cant delete or edit this item because you did not created it')
+
 }
 
 const onGetAllExamplesUserInterfaceFailure = function () {
     $('.showing-cards-handlebars').html('Something is not working in the code')
-
-
 }
+
+
 
 module.exports = {
     signUpUserInterfaceSuccess,

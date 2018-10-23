@@ -3,7 +3,7 @@
 const getFormFields = require('../../lib/get-form-fields.js')
 const ajaxCallsFile = require('./ajaxCallsFile.js')
 const userInterfaceFile = require('./userInterfaceFile.js')
-// const store = require('../store')
+const store = require('/Users/alfredrafael/wdi/projects/project-2-client/assets/scripts/store.js')
 
 const onSignUp = function (event) {
     event.preventDefault()
@@ -64,18 +64,43 @@ const onGetAllExamples = function (event) {
 const onDeleteExample = function (event) {
     event.preventDefault()
 
-    const flash_card_id = $('event.target').closest('section').data('id')
+    store.flash_card_id = $(event.target).data('id')
 
-    if (confirm('Yo! You shuer yu wanna dilit ')) {
-        ajaxCallsFile.onDeleteExample(flash_card_id)
+    // const flash_card_id = $('event.target').closest('section').data('id')
+
+    if (confirm('Are you sure you want to delete this example?')) {
+        ajaxCallsFile.onDeleteExampleAjaxCall()
             .then(() => onGetAllExamples(event))
             .catch(userInterfaceFile.deleteExampleFailure)
     }
 }
 
 const addHandleBarComponent = () => {
-    $('showing-cards-handlebars').on('click', 'button', onDeleteExample)
+    $('showing-cards-handlebars').on('click', onDeleteExample)
 }
+
+const onUpdateIndexCard = function (e) {
+    e.preventDefault()
+    console.log(event)
+    const dataOnForm = getFormFields(e.target)
+    store.id = $(e.target).data('id')
+    ajaxCallsFile.updateIndexCardAjaxCall(dataOnForm)
+        .then(userInterfaceFile.updateSucess)
+        .catch(userInterfaceFile.updateFailure)
+}
+
+const addHandlers = () => {
+    $('#sign-up-form').on('submit', onSignUp)
+    $('#sign-in-form').on('submit', onSignIn)
+    $('#sign-out-button').on('click', onSignOut)
+    $('#change-password-form').on('submit', onChangePassword)
+    $('#create-example-form').on('submit', onCreateExample)
+    $('#see-examples-tab').on('click', onGetAllExamples)
+    $('#showing-cards-handlebars').on('click', '.delete-card-button', onDeleteExample)
+    $('#showing-cards-handlebars').on('submit', '.update-example-form', onUpdateIndexCard)
+    // $('.editButton').on('submit', $('.update-example-section').removeClass('hidden'))
+}
+
 
 
 
@@ -86,6 +111,9 @@ module.exports = {
     onChangePassword,
     onCreateExample,
     onGetAllExamples,
-    addHandleBarComponent
+    addHandleBarComponent,
+    addHandlers,
+    onDeleteExample,
+    onUpdateIndexCard
 }
 

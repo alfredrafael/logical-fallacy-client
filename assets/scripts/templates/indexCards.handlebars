@@ -1,53 +1,43 @@
 {{#each flash_cards as |individual_flash_card|}}
 {{!-- {{log individual_flash_card}} --}}
 
-<section style="background: url(https://images-na.ssl-images-amazon.com/images/I/71atJIqKIcL._SL1500_.jpg)no-repeat center; width: 70vw; margin-left: 10px">
+<section class="handlebars-card-section" style="background: url(https://images-na.ssl-images-amazon.com/images/I/71atJIqKIcL._SL1500_.jpg)no-repeat center; width: 70vw; margin-left: 10px">
     <div>
         <hr />
         <h3 style="margin-left: 20px" data-id="{{individual_flash_card.id}}"> <small>Fallacy:</small> <br /><strong>{{individual_flash_card.fallacy_name}}</strong>
-            <br> <small> <br /> Example: </small> <br /> {{individual_flash_card.fallacy_example}} <br /> <span style="color: red"><br />
-                Example ID:
+            <br> <small> <br /> Example: </small> <br /> <br />{{individual_flash_card.fallacy_example}} <br /> <span
+                style="color: crimson; margin-left: -5px"><br />
+                Index Card ID:
                 {{individual_flash_card.id}}
             </span>
         </h3>
     </div>
+
+
+    <div class="delete-card-button" style="display: inline-block">
+        <button data-id="{{individual_flash_card.id}}" type="submit" value="Remove" class="btn btn-danger">Remove</button>
+    </div>
+
+    <div class="update-card-button" style="display: inline-block">
+        <button data-id="{{individual_flash_card.id}}" type="submit" value="Edit Example" class="btn btn-primary">Edit</button>
+    </div>
 </section>
 
-<section data-id="{{individual_flash_card.id}}">
-    <button type="submit" value="Remove" class="btn btn-danger">Remove</button>
-    <button type="submit" class="btn btn-primary">Edit Example</button>
-    <hr />
+<section class="update-example-section">
+    <form data-id="{{individual_flash_card.id}}" class="update-example-form">
+        <h1>Edit your example</h1>
+        <input name="flash_card[fallacy_name]" type="text" class="question" required autocomplete="off" />
+
+        <label for="fallacy-name-input"><span>What is the logical fallacy you chose?</span></label>
+        <textarea style="margin-bottom: -25px" name="flash_card[fallacy_example]" rows="2" class="question" required
+            autocomplete="off"></textarea>
+        <label for="example-input"><span>What is your example of that logical fallacy?</span></label>
+        <br />
+        <button type="submit" class="btn btn-primary editButton" value="Submit!">Edit!</button>
+    </form>
 </section>
+
+
 <br />
 
 {{/each}}
-
-
-{{!--
-<div>
-    <h1>Name of Fallacy</h1>
-    <p>The fallacy example goes inside of these tags</p>
-    <button>Delete Example</button>
-    <button> Edit Example </button>
-</div> --}}
-
-{{!--
-{{#each books as |book|}}
-{{log book}}
-<!-- {{> partial}}
-  Don't uncomment yet -->
-
-<div>
-    <h1 data-id="{{book.id}}"> <small>Title: {{limit book.title 10}}</small></h1>
-    <section data-id="{{book.id}}">
-        <p>{{#if book.author}}
-            By: {{book.author}}
-            {{else}}
-            No author provided.
-            {{/if}}
-        </p>
-        <button type="submit" class="btn btn-default">Remove</button>
-    </section>
-</div>
-
-{{/each}} --}}

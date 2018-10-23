@@ -498,3 +498,7 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 .show-cards {
 
 }
+
+.hidden {
+  display: none;
+}
