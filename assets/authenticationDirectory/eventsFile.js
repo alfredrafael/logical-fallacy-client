@@ -89,7 +89,30 @@ const onUpdateIndexCard = function (e) {
         .catch(userInterfaceFile.updateFailure)
 }
 
+
+// const hideWhenAbout = () => {
+//     $('.about-section').toggle()
+//     // $('.study-materials').hide()
+//     // $('.create-example').hide()
+//     // $('.change-password-section').hide()
+//     // $('.update-example-section').hide()
+//     // $('#show-cards-html').hide()
+//     // $('.show-cards').hide()
+// }
+
+// const hideWhenStudy = () => {
+//     $('.study-materials').show()
+//     $('.create-example').hide()
+//     $('.change-password-section').hide()
+//     $('.update-example-section').hide()
+//     $('#show-cards-html').hide()
+//     $('.show-cards').hide()
+//     $('.about-section').hide()
+// }
+
+
 const addHandlers = () => {
+
     $('#sign-up-form').on('submit', onSignUp)
     $('#sign-in-form').on('submit', onSignIn)
     $('#sign-out-button').on('click', onSignOut)
@@ -99,6 +122,25 @@ const addHandlers = () => {
     $('#showing-cards-handlebars').on('click', '.delete-card-button', onDeleteExample)
     $('#showing-cards-handlebars').on('submit', '.update-example-form', onUpdateIndexCard)
     // $('.editButton').on('submit', $('.update-example-section').removeClass('hidden'))
+
+    // $('.about-section').on('click', hideWhenAbout)
+    // $('.study-materials').on('click', hideWhenStudy)
+    // $('.create-example').on('click', hideWhenCreate)
+    // $('.change-password-section').on('click', hideWhenChangingPassword)
+    // $('.study-materials', '#show-cards-html').on('click', hideWhenShowCards)
+
+
+
+    
+    
+    // (){
+    // $('.study-materials').hide()
+    // $('.create-example').hide()
+    // $('.change-password-section').hide()
+    // $('.update-example-section').hide()
+    // $('#show-cards-html').hide()
+    // $('.show-cards').hide()
+    // })
 }
 
 

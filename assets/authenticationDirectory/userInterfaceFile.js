@@ -24,6 +24,8 @@ $(() => {
     $('.create-example').hide()
     $('.change-password-section').hide()
     $('.update-example-section').hide()
+    $('#show-cards-html').hide()
+    $('.show-cards').hide()
 })
 
 const signUpUserInterfaceSuccess = () => {
@@ -55,6 +57,7 @@ const signInUserInterfaceSuccess = (response) => {
     $('.create-example').show()
     $('.change-password-section').show()
 
+    $('#show-cards-html').show()
     $('.show-cards').show()
 
 
@@ -66,6 +69,7 @@ const signInUserInterfaceFailure = () => {
     $('#show-sign-in-message').trigger('reset')
     $("#show-sign-in-message").fadeOut(3000)
     $('#sign-in-form').trigger('reset')
+    onGetAllExamples()
 }
 
 const signOutSuccessUserInterface = () => {
@@ -75,6 +79,7 @@ const signOutSuccessUserInterface = () => {
     $('.create-example').hide()
     $('.change-password-section').hide()
     $('.show-cards').hide()
+    $('#show-cards-html').hide()
 
 }
 

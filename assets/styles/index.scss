@@ -10,7 +10,8 @@
 }
 
 .sign-in-out {
- // background: url(http://www.thewallpapers.org/photo/2735/arch,%2520Greek,%2520Corinthian%2520capitals%2520and%2520lintels.jpg) no-repeat center; 
+  background: rgba(169, 198, 240, 0.728);
+  margin-top: -25px
 }
 
 .login-wrap {
@@ -19,7 +20,7 @@
 	max-width:525px;
 	min-height:670px;
 	position:relative;
-	background:url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/4InSdWGClimbxgd5m/closeup-marble-statue-of-the-ancient-greek-philosopher-plato-on-sky-background_hisuf-ii__F0000.png) no-repeat center;
+	background:url(https://c1.staticflickr.com/4/3112/2880013776_5c1eaff68b_b.jpg)no-repeat center;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 
@@ -185,13 +186,36 @@
 	text-align:center;
 }
 
+
+
+.right-half {
+display: inline-block;
+  position: absolute;
+  right: 0px;
+  width: 50%;
+//  margin-top: -400px;
+  display: inline-block; 
+  width: 50vw;
+
+  background:url(https://c1.staticflickr.com/4/3112/2880013776_5c1eaff68b_b.jpg)no-repeat center;
+
+}
+
+
+
+
+
 ///////////////////////////// Nav //////////////////////////////////////////////
 
 
 #navbar {
+  font-family: 'Libre Baskerville';
   overflow: hidden;
   background-color: #333;
-  z-index: 3000
+  //background: linear-gradient(blue, #333);
+
+  z-index: 3000;
+
 }
 
 #navbar a {
@@ -228,11 +252,33 @@
   padding-top: 60px;
 }
 
+////////////////////////////////// about ////////////////////////////////
+.left-half-about {
+  padding: 20px;
+  background: rgba(169, 198, 240, 0.728);
+  position: absolute;
+  left: 0px;
+  width: 50%;
 
+}
+
+.right-half-about {
+  padding: 10px;
+  background: rgba(169, 198, 240, 0.728);
+  position: absolute;
+  right: 0px;
+  width: 50%;
+
+  background: linear-gradient(rgba(169, 198, 240, 0.728), rgba(169, 198, 240, 0.728)), url('https://d32ogoqmya1dw8.cloudfront.net/images/assessment/thinker.jpg')no-repeat center;
+  height: 90vh;
+
+}
 //////////////////////////////////study cards ///////////////////////////////////////////////////
 
 .study-materials {
-  display: inline-block
+  display: inline-block;
+  background: rgba(169, 198, 240, 0.728);
+
 }
 
 #sidebar-wrapper {
@@ -249,9 +295,6 @@
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-
-
-
 
 .flip-card h1 {
     padding: 0; 
@@ -333,7 +376,6 @@
 .content {
   padding: 1em;
 }
-
 
 
 ////////////////////////////// //////////////////////////////////////
@@ -485,7 +527,13 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 .change-password-section,
 .about-section,
 .create-example {
-  height: 105vh
+  height: 103vh;
+
+}
+
+.change-password-section {
+  background: linear-gradient(rgba(169, 198, 240, 0.728), white);
+
 }
 
 // http://www.adam-mcfarland.net/wp-content/uploads/2009/03/blank-index-card.jpg
@@ -496,6 +544,7 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 ///////////////////see examples ////////////////
 
 .show-cards {
+  background: linear-gradient(rgba(169, 198, 240, 0.728), white);
 
 }
 
