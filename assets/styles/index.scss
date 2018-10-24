@@ -12,7 +12,6 @@
 .sign-in-out {
   background: rgba(169, 198, 240, 0.728);
   margin-top: -25px;
-  z-index: 1
 }
 
 .login-wrap {
@@ -190,17 +189,22 @@
 
 
 .right-half {
-display: inline-block;
   position: absolute;
   right: 0px;
   width: 50%;
 //  margin-top: -400px;
   display: inline-block; 
   width: 50vw;
-
+  height: 100vh;
   background:url(https://c1.staticflickr.com/4/3112/2880013776_5c1eaff68b_b.jpg)no-repeat center;
-
 }
+
+// .left-half {
+//   background-color: #ff9e2c;
+//   position: absolute;
+//   left: 0px;
+//   width: 50%;
+// }
 
 
 
