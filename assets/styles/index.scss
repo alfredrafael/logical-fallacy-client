@@ -2,6 +2,23 @@
 // @import './new-file.scss'
 
 
+@media only screen and (max-width: 1100px) {
+
+  .about-section {
+    //display: none;
+     margin-bottom: -580px;
+
+    }
+  .left-half-about {
+    display: none; 
+    }
+  .right-half-about {
+    display: none;
+    }
+  #navbar {
+   display: block;
+  }
+}
 //////////////////////////////SIGN IN / SIGN OUT FORM //////////////////////////////////////
 #show-sign-in-message,
 #show-sign-up-message {
@@ -11,7 +28,7 @@
 
 .sign-in-out {
   background: rgba(169, 198, 240, 0.728);
-  margin-top: -10px;
+  margin-top: -25px;
   height: 100vh
 }
 
@@ -200,15 +217,6 @@
   background:url(https://c1.staticflickr.com/4/3112/2880013776_5c1eaff68b_b.jpg)no-repeat center;
 }
 
-// .left-half {
-//   background-color: #ff9e2c;
-//   position: absolute;
-//   left: 0px;
-//   width: 50%;
-// }
-
-
-
 
 
 ///////////////////////////// Nav //////////////////////////////////////////////
@@ -284,8 +292,17 @@
 .study-materials {
   display: inline-block;
   background: rgba(169, 198, 240, 0.728);
-
 }
+
+.study-materials .content p {
+  font-size: 20px;
+}
+
+
+.study-materials h1 {
+  margin-left: 50px;
+}
+
 
 #sidebar-wrapper {
   z-index: 0;
@@ -551,9 +568,6 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 
 .show-cards {
   background: linear-gradient(rgba(169, 198, 240, 0.728), white);
-
 }
 
-.hidden {
-  display: none;
-}
+

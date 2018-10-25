@@ -36,10 +36,10 @@ const signUpUserInterfaceSuccess = () => {
 }
 
 const signUpUserInterfaceFailure = () => {
-    $('#show-sign-up-message').html('Sign up didn\'t work')
-    $('#show-sign-up-message').trigger('reset')
-    $("#show-sign-up-message").fadeOut(2000)
+    $("#show-sign-up-message").fadeOut(4000)
     $('#sign-up-form').trigger('reset')
+    $('#show-sign-up-message').html('Sign up didn\'t work')
+
 }
 
 
