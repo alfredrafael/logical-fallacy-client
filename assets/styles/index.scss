@@ -7,8 +7,12 @@
   .about-section {
     //display: none;
      margin-bottom: -580px;
-
     }
+
+  #navbar #about-option {
+    display: none;
+  }
+  
   .left-half-about {
     display: none; 
     }
@@ -19,6 +23,33 @@
    display: block;
   }
 }
+
+
+@media only screen and (max-width: 840px) {
+
+.sign-in-out .right-half {
+    display: none;
+}
+
+.login-html, 
+.login-html,
+.login-wrap {
+  margin-left: 100px;
+
+  }
+
+  .login-wrap {
+    width:50%;
+    margin:auto 0;
+    max-width:200px;
+    min-height:400px;
+    position:fixed;
+    background:url()no-repeat center;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+  }
+}
+
+
 //////////////////////////////SIGN IN / SIGN OUT FORM //////////////////////////////////////
 #show-sign-in-message,
 #show-sign-up-message {
@@ -34,7 +65,7 @@
 
 .login-wrap {
 	width:100%;
-	margin:auto;
+  margin:auto;
 	max-width:525px;
 	min-height:670px;
 	position:relative;
@@ -569,5 +600,7 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 .show-cards {
   background: linear-gradient(rgba(169, 198, 240, 0.728), white);
 }
+
+
 
 
