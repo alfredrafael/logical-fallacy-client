@@ -14,12 +14,6 @@ $(() => {
   // $('#handlebars-section').on('click', ''eventsFile.onGetAllExamples)
 })
 
-
-
-
-
-
-
 // checking if it fires...
 // $('#sign-up-form').on('submit', function (e) {
 //   e.preventDefault()
