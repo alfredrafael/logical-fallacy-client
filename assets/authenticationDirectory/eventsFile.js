@@ -64,8 +64,6 @@ const onDeleteExample = function (event) {
     event.preventDefault()
     store.flash_card_id = $(event.target).data('id')
 
-    // const flash_card_id = $('event.target').closest('section').data('id')
-
     if (confirm('Are you sure you want to delete this example?')) {
         ajaxCallsFile.onDeleteExampleAjaxCall()
             .then(() => onGetAllExamples(event))
