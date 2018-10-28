@@ -58,7 +58,6 @@ const onCreateExample = function (e) {
     ajaxCallsFile.createExampleAjaxCall(userExample)
         .then(userInterfaceFile.onCreateExampleSuccess)
         .catch(userInterfaceFile.onCreateExampleFailure)
-
 }
 
 const onDeleteExample = function (event) {

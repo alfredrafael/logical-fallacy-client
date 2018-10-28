@@ -1,9 +1,10 @@
 {{#each flash_cards as |individual_flash_card|}}
 {{!-- {{log individual_flash_card}} --}}
 
-<section class="handlebars-card-section" style="background: url(https://images-na.ssl-images-amazon.com/images/I/71atJIqKIcL._SL1500_.jpg)no-repeat center; width: 70vw; margin-left: 10px">
+<section class="handlebars-card-section" style="background: url(https://images-na.ssl-images-amazon.com/images/I/71atJIqKIcL._SL1500_.jpg)no-repeat center; width: 70vw; margin-left: 10px; border: 1px black solid">
     <div>
-        <h3 style="margin-left: 20px" data-id="{{individual_flash_card.id}}"> <small>Fallacy:</small> <br /><strong>{{individual_flash_card.fallacy_name}}</strong>
+        <h3 style="
+    margin-left: 20px" data-id="{{individual_flash_card.id}}"> <small>Fallacy:</small> <br /><strong>{{individual_flash_card.fallacy_name}}</strong>
             <br> <small> <br /> Example: </small> <br /> <br />{{individual_flash_card.fallacy_example}} <br /> <span
                 style="color: crimson; margin-left: -5px"><br />
                 Index Card ID:
@@ -13,8 +14,9 @@
     </div>
 
 
-    <div class="delete-card-button" style="display: inline-block">
-        <button data-id="{{individual_flash_card.id}}" type="submit" value="Remove" class="btn btn-danger">Remove</button>
+    <div class="delete-card-button">
+        <button data-id="{{individual_flash_card.id}}" type="submit" style="margin-left: 15px" class="btn btn-danger">Remove
+            Card</button>
     </div>
 </section>
 

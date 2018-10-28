@@ -94,9 +94,9 @@ const onChangePasswordFailure = () => {
 }
 
 const onCreateExampleSuccess = () => {
-    $('.display-create-example-status').html("Success at posting your example")
+    $('.display-create-example-status').html("Success at posting your example. Click on the green button below to refresh all cards")
     $('.display-create-example-status').css('color', 'green')
-    $('.display-create-example-status').fadeOut(3000)
+    $('.display-create-example-status').fadeOut(6000)
     $('#create-example-form').trigger('reset')
 }
 
@@ -141,6 +141,6 @@ module.exports = {
     onCreateExampleFailure,
     deleteExampleFailure,
     onGetAllExamplesUserInterfaceSuccess,
-    onGetAllExamplesUserInterfaceFailure,
-    updateFailure
+    updateFailure,
+    onGetAllExamplesUserInterfaceFailure
 }
