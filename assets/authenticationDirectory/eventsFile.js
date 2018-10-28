@@ -63,7 +63,6 @@ const onCreateExample = function (e) {
 
 const onDeleteExample = function (event) {
     event.preventDefault()
-
     store.flash_card_id = $(event.target).data('id')
 
     // const flash_card_id = $('event.target').closest('section').data('id')
@@ -75,19 +74,29 @@ const onDeleteExample = function (event) {
     }
 }
 
-const addHandleBarComponent = () => {
-    $('showing-cards-handlebars').on('click', onDeleteExample)
-}
-
 const onUpdateIndexCard = function (e) {
     e.preventDefault()
     console.log(event)
     const dataOnForm = getFormFields(e.target)
     store.id = $(e.target).data('id')
     ajaxCallsFile.updateIndexCardAjaxCall(dataOnForm)
-        .then(userInterfaceFile.updateSucess)
+        .then(() => onGetAllExamples(e))
         .catch(userInterfaceFile.updateFailure)
 }
+
+const addHandleBarComponent = () => {
+    $('showing-cards-handlebars').on('click', onDeleteExample)
+}
+
+// const onUpdateIndexCard = function (e) {
+//     e.preventDefault()
+//     console.log(event)
+//     const dataOnForm = getFormFields(e.target)
+//     store.id = $(e.target).data('id')
+//     ajaxCallsFile.updateIndexCardAjaxCall(dataOnForm)
+//         .then(userInterfaceFile.updateSuccess)
+//         .catch(userInterfaceFile.updateFailure)
+// }
 
 const addHandlers = () => {
 
@@ -96,13 +105,13 @@ const addHandlers = () => {
     $('#sign-out-button').on('click', onSignOut)
     $('#change-password-form').on('submit', onChangePassword)
     $('#create-example-form').on('submit', onCreateExample)
-    $('#see-examples').on('click', onGetAllExamples)
+    $('.see-examples').on('click', onGetAllExamples)
     $('#showing-cards-handlebars').on('click', '.delete-card-button', onDeleteExample)
     $('#showing-cards-handlebars').on('submit', '.update-example-form', onUpdateIndexCard)
+    // $('#showing-cards-handlebars').on('click', '.update-example-section', function () {
+    //     alert("this is working")
+    // })
 }
-
-
-
 
 module.exports = {
     onSignUp,

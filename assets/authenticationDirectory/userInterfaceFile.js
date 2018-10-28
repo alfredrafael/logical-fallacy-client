@@ -132,6 +132,14 @@ const onGetAllExamplesUserInterfaceFailure = function () {
     $('.showing-cards-handlebars').html('Something is not working in the code')
 }
 
+// const updateSuccess = function () {
+//     $('.update-example-form').trigger('reset')
+//     alert('Caramba! Refresh')    
+// }
+
+const updateFailure = function () {
+    alert("Your update was not successful")
+}
 
 
 module.exports = {
@@ -147,5 +155,6 @@ module.exports = {
     onCreateExampleFailure,
     deleteExampleFailure,
     onGetAllExamplesUserInterfaceSuccess,
-    onGetAllExamplesUserInterfaceFailure
+    onGetAllExamplesUserInterfaceFailure,
+    updateFailure
 }
