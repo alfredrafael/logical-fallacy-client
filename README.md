@@ -2,19 +2,19 @@
 
 # Story of my logical-fallacies' website
 
-A as a developer who taught elementary and high school, I am fascinated by philosophy and the ways it can improve our lives. To learn how to deconstruct logical fallacies in others' arguments, and IDENTIFYING faults in our own is a life-skill that can make our lives so much richer. By learning the terminology used to refer to certian logical fallacies, we become able to IDENTIFY them (in others, or even within our own heads) and therefore curve our behavior with a more productive and solid response.
+A as a developer who taught elementary and high school, I am fascinated by philosophy and the ways in which it can improve our lives. To learn how to deconstruct logical fallacies in others' arguments, and IDENTIFYING faults in our own is a life-skill that can make our lives so much richer. By learning the terminology used to refer to certian logical fallacies, we become able to IDENTIFY them (in others, or even within our own heads) and therefore curve our behavior with a more productive and solid response.
 
 The purpose of this website is to expose the user to these ancient vocabulary words, allowing him/her to identify logical fallacies in the future, and to allow users to provide their own examples.
 
 
 ## User story
 
-1. As a user, I can Log in and sign in into my account
-2. As a user, I can :
-    -Study logical fallacies
-    -Contribute an example of a logical fallacy
-    -See other people's examples of logical fallacies
-    -Delete / Edit my own example.
+- As a user, I can Log in and sign in into my account
+- As a user, I can :
+    - Study logical fallacies
+    - Contribute an example of a logical fallacy
+    - See other people's examples of logical fallacies
+    - Delete / Edit my own example.
 
 ## Technologies used
 

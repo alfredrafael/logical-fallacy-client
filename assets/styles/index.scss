@@ -301,7 +301,7 @@
 ////////////////////////////////// about ////////////////////////////////
 .left-half-about {
   padding: 20px;
-  background: rgba(169, 198, 240, 0.728);
+  background: linear-gradient(rgba(193, 213, 242, 0.728), rgba(169, 198, 240, 0.728));
   position: absolute;
   left: 0px;
   width: 50%;
@@ -310,7 +310,7 @@
 
 .right-half-about {
   padding: 10px;
-  background: rgba(169, 198, 240, 0.728);
+  background: linear-gradient(rgba(193, 213, 242, 0.728), rgba(169, 198, 240, 0.728));
   position: absolute;
   right: 0px;
   width: 50%;
