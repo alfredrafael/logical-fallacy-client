@@ -88,15 +88,6 @@ const addHandleBarComponent = () => {
     $('showing-cards-handlebars').on('click', onDeleteExample)
 }
 
-// const onUpdateIndexCard = function (e) {
-//     e.preventDefault()
-//     console.log(event)
-//     const dataOnForm = getFormFields(e.target)
-//     store.id = $(e.target).data('id')
-//     ajaxCallsFile.updateIndexCardAjaxCall(dataOnForm)
-//         .then(userInterfaceFile.updateSuccess)
-//         .catch(userInterfaceFile.updateFailure)
-// }
 
 const addHandlers = () => {
 
