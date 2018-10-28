@@ -3,14 +3,11 @@
 const store = require('../scripts/store')
 const dataFromHandlebars = require('/Users/alfredrafael/wdi/projects/project-2-client/assets/scripts/templates/indexCards.handlebars')
 
-
+// for the sticky navigation purposes
 window.onscroll = function () { myFunction() };
 
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
-
-
-
 
 function myFunction() {
     if (window.pageYOffset >= sticky) {
@@ -20,7 +17,7 @@ function myFunction() {
     }
 }
 
-
+// hide everything unless signed in
 $(() => {
     $('.study-materials').hide()
     $('.about-section').hide()
@@ -42,7 +39,6 @@ const signUpUserInterfaceFailure = () => {
     $("#show-sign-up-message").fadeOut(4000)
     $('#sign-up-form').trigger('reset')
     $('#show-sign-up-message').html('Sign up didn\'t work')
-
 }
 
 
@@ -54,12 +50,10 @@ const signInUserInterfaceSuccess = (response) => {
     $('#sign-in-form').trigger('reset')
     $('.about-section').show()
     $('.sign-in-out').hide()
-
     $('.study-materials').show()
     $('.about-section').show()
     $('.create-example').show()
     $('.change-password-section').show()
-
     $('#show-cards-html').show()
     $('.show-cards').show()
 }
@@ -79,7 +73,6 @@ const signOutSuccessUserInterface = () => {
     $('.change-password-section').hide()
     $('.show-cards').hide()
     $('#show-cards-html').hide()
-
 }
 
 const signOutFailureUserInterface = () => {
@@ -125,22 +118,15 @@ const onGetAllExamplesUserInterfaceSuccess = (dataFromServer) => {
     const showExampleCards = dataFromHandlebars({ flash_cards: dataFromServer.flash_cards })
     $('.showing-cards-handlebars').html(showExampleCards)
     // $('.showing-cards-handlebars').html('You cant delete or edit this item because you did not created it')
-
 }
 
 const onGetAllExamplesUserInterfaceFailure = function () {
     $('.showing-cards-handlebars').html('Something is not working in the code')
 }
 
-// const updateSuccess = function () {
-//     $('.update-example-form').trigger('reset')
-//     alert('Caramba! Refresh')    
-// }
-
 const updateFailure = function () {
     alert("Your update was not successful")
 }
-
 
 module.exports = {
     signUpUserInterfaceSuccess,
