@@ -244,8 +244,9 @@
 //  margin-top: -400px;
   display: inline-block; 
   width: 50vw;
-  height: 100vh;
+  height: 105vh;
   background:url(https://c1.staticflickr.com/4/3112/2880013776_5c1eaff68b_b.jpg)no-repeat center;
+  
 }
 
 
@@ -314,7 +315,7 @@
   right: 0px;
   width: 50%;
 
-  background: linear-gradient(rgba(169, 198, 240, 0.728), rgba(169, 198, 240, 0.728)), url('https://d32ogoqmya1dw8.cloudfront.net/images/assessment/thinker.jpg')no-repeat center;
+  background: linear-gradient(rgba(193, 213, 242, 0.728), rgba(169, 198, 240, 0.728)), url('https://d32ogoqmya1dw8.cloudfront.net/images/assessment/thinker.jpg')no-repeat center;
   height: 90vh;
 
 }
@@ -579,10 +580,13 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 
 ///////////////////////////////////////////change password section /////////////////////////
 .change-password-section,
-.about-section,
-.create-example {
+.about-section {
   height: 103vh;
 
+}
+
+.create-example {
+  height: 100vh;
 }
 
 .change-password-section {

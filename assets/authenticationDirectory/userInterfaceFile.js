@@ -56,6 +56,7 @@ const signInUserInterfaceSuccess = (response) => {
     $('.change-password-section').show()
     $('#show-cards-html').show()
     $('.show-cards').show()
+
 }
 
 const signInUserInterfaceFailure = () => {

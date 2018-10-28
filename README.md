@@ -1,10 +1,10 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Story of the logical-fallacy test
+# Story of my logical-fallacies' website
 
-A as a developer who taught elementary and high school, I am fascinated by philosophy and the ways it can improve our lives. From learning how to frame arguments intelligently, to the way in which we respond to other peoples' points of view, being able to IDENTIFY faults in our own logic (as well as faulty logic in other people's arguments) is a life skill that make our lives richer. By learning the terminology used to refer to common logical fallacies, we become able to IDENTIFY them as soon as they occur (either from others, or even in our own heads) and therefore curve our behavior in a more productive response.
+A as a developer who taught elementary and high school, I am fascinated by philosophy and the ways it can improve our lives. To learn how to deconstruct logical fallacies in others' arguments, and IDENTIFYING faults in our own is a life-skill that can make our lives so much richer. By learning the terminology used to refer to certian logical fallacies, we become able to IDENTIFY them (in others, or even within our own heads) and therefore curve our behavior with a more productive and solid response.
 
-The purpose of this test is to expose the user to these vocabulary words, allowing him/her to identify them in the future. 
+The purpose of this website is to expose the user to these ancient vocabulary words, allowing him/her to identify logical fallacies in the future, and to allow users to provide their own examples.
 
 
 ## User story
@@ -13,13 +13,39 @@ The purpose of this test is to expose the user to these vocabulary words, allowi
 2. As a user, I can :
     -Study logical fallacies
     -Contribute an example of a logical fallacy
-    -See other people's examples
+    -See other people's examples of logical fallacies
     -Delete / Edit my own example.
-3. 
 
-## WireFrame
+## Technologies used
 
-To see this project's wireframe, please refer to the following pdf: https://drive.google.com/file/d/1-WqMGO1DT7x5quqpstjHaUlL-17KNvtW/view?ts=5bc8c570
+- HTML5
+- CSS / SCSS / Bootstrap
+- Javascript (jQuery + Handlebars)
+- Ruby on Rails (Server side)
+
+## WireFrame and ERD
+
+This project's original wireframe (which was meant to be a test) can be found [here](https://imgur.com/a/QSgmlz2). However, given time constraints I decided to structure my website as a resource for learning logical-fallacies + sharing examples with other users. While taking taking about the idea with Maria Peniche, we came up with [this](https://imgur.com/a/TKIguRq) ERD (Entity Relationship Diagram) structure over lunch. 
+
+## Unsolved problems
+
+- I would like sign-in messages (and other notifications) to appear consistently, not only the first time the user use them (sign up success/failure, sign-in failure, and change password success/failure).
+
+- I would like the "Create an Example" section, when accessed by the navbar, allow the user to see the h1 text: "Create an Example"
+
+- I would like to provide the user with a modal to make changes to his/her existing index card
+
+- I would like to provide the user with a search-bar that allow him/her to look for index cards based on:
+     - Fallacy-name, 
+     - Index card id number 
+     - Text inside the index card. 
+
+
+
+- HTML5
+- CSS / SCSS / Bootstrap
+- Javascript (jQuery + Handlebars)
+- Ruby on Rails (Server side)
 
 
 ## Additional Resources
