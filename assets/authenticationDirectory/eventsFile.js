@@ -56,6 +56,7 @@ const onCreateExample = function (e) {
 
     const userExample = getFormFields(event.target)
     ajaxCallsFile.createExampleAjaxCall(userExample)
+        .then(() => onGetAllExamples(e))
         .then(userInterfaceFile.onCreateExampleSuccess)
         .catch(userInterfaceFile.onCreateExampleFailure)
 }
