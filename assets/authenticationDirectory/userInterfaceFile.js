@@ -95,7 +95,7 @@ const onChangePasswordFailure = () => {
 }
 
 const onCreateExampleSuccess = () => {
-    $('.display-create-example-status').html("Example Created! Scroll to see your card among the others")
+    $('.display-create-example-status').html("Example Created! Scroll down to see your card among the others")
     $('.display-create-example-status').css('color', 'green')
     $('.display-create-example-status').fadeOut(6000)
     $('#create-example-form').trigger('reset')
