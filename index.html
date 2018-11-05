@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Logical Fallacy Repo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+
+  <br />
+
+  <section class="sign-in-out" style="display: inline-block; width: 50vw; height: 105vh; margin-bottom: -250px">
+    <div class="login-wrap">
+      <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+
+        <div class="login-form">
+          <div class="sign-in-htm">
+            <div class="group">
+              <form id="sign-in-form">
+                <fieldset>
+                  <label for="sign-in-email-input" class="label">Email</label>
+                  <input name="credentials[email]" id="sign-in-email-input" type="text" class="input">
+            </div>
+            <div class="group">
+              <label for="password-sign-in-input" class="label">Password</label>
+              <input name="credentials[password]" id="password-sign-in-input" type="password" class="input" type="password">
+            </div>
+            <div class="group">
+
+            </div>
+            <div class="group">
+              <button type="submit" id="sign-in-button" class="button" value="Sign In" style="margin-left: 9px"> Sign
+                in </button>
+            </div>
+            </fieldset>
+            </form>
+            <h1 id="show-sign-in-message"> </h1>
+          </div>
+
+
+
+          <div class="sign-up-htm">
+            <div class="group">
+              <form id="sign-up-form">
+                <fieldset>
+                  <label for="sign-up-email-input" class="label">Email</label>
+                  <input name="credentials[email]" id="sign-up-email-input" type="email" class="input">
+            </div>
+            <div class="group">
+              <label for="password-sign-up-input" class="label">Password</label>
+              <input name="credentials[password]" id="password-sign-up-input" type="password" class="input" type="password">
+            </div>
+            <div class="group">
+              <div class="group">
+                <label for="pwd-confirmation-input" class="label">
+                  Confirm Password
+                </label>
+                <input name="credentials[password_confirmation]" id="pwd-confirmation-input" type="password" class="input"
+                  type="password">
+              </div>
+              <div class="group">
+              </div>
+              <div class="group">
+                <button type="submit" id="sign-up-button" class="button" value="Sign Up" style="margin-left: 9px"> Sign
+                  up </button>
+              </div>
+              </fieldset>
+              </form>
+              <h1 id="show-sign-up-message"> </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <article class="right-half" style="font-family: Libre Baskerville; background: rgba(169, 198, 240, 0.728); margin-top: -670px"
+      , serif;">
+      <!--height: 100vh;-->
+      <h1>
+        <div>
+          <span style="margin-top: 70px">The</span>
+          <span style="font-size: 45px; font-family: Libre Baskerville"> LOGIC </span>
+          <span>of</span>
+        </div>
+        <div style="font-size: 45px; font-family: Libre Baskerville; margin-left: 10px">LOGICAL FALLACIES</div>
+      </h1>
+      <p style="margin-left: 10px"><strong>A repository of user-generated examples <strong>
+            <br /> <small> By Alfredo and ' The People ' <small> </p>
+    </article>
+
+  </section>
+
+
+
+  <!--////////////////////////////   ABOUT  //////////////////////////////////////////////////////////////////////////////////////-->
+  <section class="about-section" id="about-tab" style="margin-top: -25px">
+
+    <div id="navbar" class="navbar navbar-expand-lg navbar-light" style="background: #1161ee; height: 80px; font-weight: bold">
+      <a href="#about-tab" id="about-option">ABOUT</a>
+      <a href="#study-tab">Learn Logical Fallacies</a>
+      <a href="#create-example-tab">Create an Example</a>
+      <a href="#show-cards-html">See other examples</a>
+      <a href="#change-password-tab">Change Password</a>
+      <a id="sign-out-button">Sign Out</a>
+    </div>
+
+    <article class="left-half-about-article">
+
+      <div class="left-half-about" style="height: 90vh">
+        <article>
+          <h1 style="font-family: Libre Baskerville; font-size: 45px; margin-bottom: 30px">
+            <strong>What are logical fallacies</strong></h1>
+          <p style="font-size: 25px"> A logical fallacy is a flaw in reasoning.
+            Logical fallacies are like tricks or illusions of thought,
+            and they're often very sneakily used by people to fool others. Don't be fooled! This website has been
+            designed to help you identify and call out faulty logic, wherever it may raise its ugly, incoherent head...
+            and to hear examples you can provide for us to see.
+
+            <br />
+            <br />
+
+
+            Read the study materials (option on the top of this website) to learn about some logical fallacies, and
+            (also on the top of this website) click to provide us with examples of these fallacies. Thank you!
+
+          </p>
+        </article class="left-half-about-article">
+      </div>
+      <div class="right-half-about">
+
+
+        <article>
+          <h1> </h1>
+          <p> </p>
+        </article>
+      </div>
+
+  </section>
+
+  <!--///////////////////////Study materials///////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+  <section class="study-materials" id="study-tab">
+    <br />
+
+    <h1 style="font-family: Libre Baskerville"> <strong>Study these common logical fallacies, and hover on cards for an
+        example</strong></h1>
+    <hr style="color: white">
+
+    <div class="flip-card" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <div class="content">
+            <h1 style="font-weight: bold">Ad Hominem</h1>
+            <p style="font-size: 20px">To attack a person's character to avoid engaging with what (s)heis actually
+              saying.
+              <br>
+              <br>
+              You avoided having to engage with criticism by turning it back on the accuser - you answered criticism
+              with criticism.
+
+            </p>
+          </div>
+        </div>
+        <div class="back">
+          <div class="content">
+            <h1>Example:</h1>
+            <p>Nicole identified that Hannah had committed a logical fallacy, but instead of addressing the substance
+              of her claim, Hannah accused Nicole of committing a fallacy earlier on in the conversation.</p>
+          </div>
+        </div>
+        <!--End flipper-->
+      </div>
+      <!--End flip-card-->
+    </div>
+
+    <div class="flip-card" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <div class="content">
+            <h1 style="font-weight: bold">No True Scotsman</h1>
+            <p style="font-size: 20px">Despite showing compeling evidence, the opponent simply shifts the goalposts and
+              claim it doesn't apply because supposedly, is not a 'true' example. <br /> <br />This kind of
+              post-rationalization is a common way of avoiding valid criticisms.</p>
+          </div>
+        </div>
+        <div class="back">
+          <div class="content">
+            <h1>Example:</h1>
+            <p>Angus declares that Scotsmen do not put sugar on their porridge, to which Lachlan points out that he is
+              a Scotsman and puts sugar on his porridge. Furious, like a true Scot, Angus yells that no true Scotsman
+              sugars his porridge.</p>
+          </div>
+        </div>
+      </div>
+      <!--End flipper-->
+    </div>
+    <!--End flip-card-->
+
+
+
+    <div class="flip-card" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <div class="content">
+            <h1 style="font-weight: bold">Burden of Proof</h1>
+            <p>The burden of proof lies with someone who is making a claim, and is not upon anyone else to disprove.
+              <br /> <br />The inability, or disinclination, to disprove a claim does not render that claim valid, nor
+              give it any credence whatsoever.</p>
+          </div>
+        </div>
+        <div class="back">
+          <div class="content">
+            <h1>Example:</h1>
+            <p>Bertrand declares that a teapot is, at this very moment, in orbit around the Sun between the Earth and
+              Mars, and that because no one can prove him wrong, his claim is therefore a valid one.</p>
+          </div>
+        </div>
+        <!--End flipper-->
+      </div>
+      <!--End flip-card-->
+    </div>
+
+
+    <div class="flip-card" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <div class="content">
+            <h1 style="font-weight: bold">Ad Populum</h1>
+            <p>Also known as the 'Bandwagon fallacy': The claim that an idea, because hold as truth (or practiced) by
+              many,
+              is automatically rendered a truthfull, or valid. <br />
+              </br>
+              Although usually there is a correlation, the validity of a claim never relies on how many people hold it
+              as truthful.
+            </p>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="content">
+            <h1>Example:</h1>
+            <p>"If CocaCola / Pepsi is as bad as you think, WHY are so many people (including doctors!) drinking it?
+              We have been drinking these for YEARS. Since everyone is drinking them, obviously they can't really
+              be a health threat "</p>
+          </div>
+        </div>
+      </div>
+      <!--End flipper-->
+    </div>
+    <!--End flip-card-->
+
+
+    <div class="flip-card" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <div class="content">
+            <h1 style="font-weight: bold; font-size: 35px">Overwhelming exception</h1>
+            <p>A statement that is technically accurate, but only after accounting for serveral exceptions, making the
+              initial argument significantly weaker. <br /> <br />
+              In many cases, the listed exceptions are given in lieu of evidence or support for the claim, not in
+              addition to evidence or support for the claim</p>
+          </div>
+        </div>
+        <div class="back">
+          <div class="content">
+            <h1>Example:</h1>
+            <p>"Besides great charities, community cohesion, rehabilitation programs, helping children learn
+              positive social-values, etc, yeah:
+              religion poisons everything..."</p>
+          </div>
+        </div>
+        <!--End flipper-->
+      </div>
+      <!--End flip-card-->
+    </div>
+
+    <div class="flip-card" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <div class="content">
+            <h1 style="font-weight: bold">Post hoc fallacy</h1>
+            <p>Named after the Latin experssion 'Post hoc ergo procter hoc' ("after this, therefore because of this").
+              <br /> <br />
+              This fallacy that assumes "since event Y followed event X, therefore event Y must have been the cause of
+              event
+              X".</p>
+          </div>
+        </div>
+        <div class="back">
+          <div class="content">
+            <h1>Example:</h1>
+            <p>A tenant moves into an apartment and the building's furnace goes faulty. The manager blames the tenant's
+              arrival for the malfunction. One event merely followed the other, in the absence of causality.</p>
+          </div>
+        </div>
+      </div>
+      <!--End flipper-->
+    </div>
+    <!--End flip-card-->
+
+
+    <div class="flip-card" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <div class="content">
+            <h1 style="font-weight: bold; font-size: 35px">The Cherry Picking Fallacy</h1>
+            <p>Also known as "anecdotal evidence", or "The Incomplete-evidence Fallacy". <br /><br />
+              To conveniently point at a single (often rare!) case that seems to confirm a particular position,
+              while simultaneouly ignoring the overwhelming amount of data or studies contradicting it.</p>
+          </div>
+        </div>
+        <div class="back">
+          <div class="content">
+            <h1>Example:</h1>
+            <p> "You may think smoking is bad for health, but that is all rubbish! Let me tell you: my grandfather
+              smoked cigars ALL his
+              life, and he lived to be 120 years old!"" <br /> <br />
+            </p>
+          </div>
+        </div>
+        <!--End flipper-->
+      </div>
+      <!--End flip-card-->
+    </div>
+
+    <div class="flip-card" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <div class="content">
+            <h1 style="font-weight: bold">Goalpost shifting</h1>
+            <p>When an opponent successfully addresses a point, and then the arguer brings up a new (further) point to
+              be addressed. <br> <br>
+              The new arguments (meant to avoid the original) are made more and more difficult
+              (or
+              diverse) until the person eventually fail to address them all. </p>
+          </div>
+        </div>
+        <div class="back">
+          <div class="content">
+            <img src="http://static.tvtropes.org/pmwiki/pub/images/moving-the-goal-posts_dilbert_9498.png" />
+          </div>
+        </div>
+      </div>
+      <!--End flipper-->
+    </div>
+    <!--End flip-card-->
+  </section>
+
+  <!--////////////////////////Change password /////////////////////////////////////////////////////////-->
+  <section class="change-password-section" id="change-password-tab">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <hr />
+
+    <form id="change-password-form" class="form-horizontal">
+      <h1> Change your password?</h1>
+      <fieldset>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="old-password-input">Current Password</label>
+          <div class="col-md-4">
+            <input id="old-password-input" name="passwords[old]" type="password" placeholder="Old password here" class="form-control input-md"
+              required="">
+          </div>
+
+          <label class="col-md-4 control-label" for="piNewPass">New Password here</label>
+          <div class="col-md-4">
+            <input id="new-password-input" name="passwords[new]" type="password" placeholder="New password here" class="form-control input-md"
+              required="">
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="change-password-button"></label>
+          <div class="col-md-8">
+            <button type="submit" id="change-password-button" name="" class="btn btn-primary">Change it!</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <h2 class="display-change-password-status"></h2>
+
+  </section>
+
+
+  <!--///////////////////////////////////CREATE EXAMPLE////////////////////////////////////////////////-->
+  <br />
+  <section class="create-example" id="create-example-tab">
+
+    <div style="margin: 20px">
+      <br />
+      <br />
+
+      <h1 style="font-family: Libre Baskerville; font-size: 45px"><strong>Create your own flashcard!<strong></h1>
+
+      <form id="create-example-form">
+        <input name="flash_card[fallacy_name]" type="text" class="question" id="fallacy-name-input" required
+          autocomplete="off" />
+        <label for="fallacy-name-input"><span>What is the logical fallacy you chose?</span></label>
+        <textarea style="margin-bottom: -25px" name="flash_card[fallacy_example]" rows="2" class="question" id="example-input"
+          required autocomplete="off"></textarea>
+        <label for="example-input"><span>What is your example of that logical fallacy?</span></label>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-primary" value="Submit!">Submit!</button>
+      </form>
+    </div>
+    <h2 class="display-create-example-status"></h2>
+  </section>
+
+  <!--//////////////////////////////Show all cards/////////////////////////////////////////////////////-->
+  <hr>
+  <section id="show-cards-html" style="height: 50vh; font-family: Libre Baskerville; font-size: 45px; margin-left: 15px">
+    Click <button class="btn btn-success see-examples">HERE</button> and scroll down to see or refresh <br /> all
+    examples in the
+    repository!</section>
+  <br />
+  <section class="show-cards" id="see-examples-tab" style="background:rgba(169, 199, 240, 0.605); ">
+    <br />
+    <br />
+    <div id="showing-cards-handlebars" class="showing-cards-handlebars"></div>
+  </section>
+</body>
+
+</html>
