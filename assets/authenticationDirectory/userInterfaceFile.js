@@ -32,6 +32,7 @@ $(() => {
 
 const signUpUserInterfaceSuccess = () => {
   $('#show-sign-up-message').html('Sign up successful. SIGN IN now')
+  $("#show-sign-up-message").fadeIn(100)
   $('#show-sign-up-message').trigger('reset')
   $("#show-sign-up-message").fadeOut(2000)
   $('#sign-up-form').trigger('reset')
