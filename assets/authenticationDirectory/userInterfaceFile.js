@@ -48,7 +48,6 @@ const signUpUserInterfaceFailure = () => {
 
 const signInUserInterfaceSuccess = (response) => {
   store.user = response.user
-  $('#show-sign-in-message').html('Sign in successful')
   $('#show-sign-in-message').trigger('reset')
   $('#sign-in-form').trigger('reset')
   $('.about-section').show()
