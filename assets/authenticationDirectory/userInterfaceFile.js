@@ -92,8 +92,8 @@ const onChangePasswordSuccess = () => {
 }
 
 const onChangePasswordFailure = () => {
-  $('.display-change-password-status').html("Successful password change!")
-  $('.display-change-password-status').css('color', 'green')
+  $('.display-change-password-status').html("Failure on password change!")
+  $('.display-change-password-status').css('color', 'red')
   $('.display-change-password-status').fadeOut(3000)
   $('#change-password-form').trigger('reset')
 }

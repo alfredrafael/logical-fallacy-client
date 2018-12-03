@@ -27,15 +27,10 @@ const onGetAllExamples = function (event) {
 const onSignIn = function (event) {
   event.preventDefault()
   const dataToSend = getFormFields(event.target)
-  // console.log(dataToSend)
-
-  ajaxCallsFile.signInAjaxCall(dataToSend)
-    //.then(console.log)
-    .then(userInterfaceFile.signInUserInterfaceSuccess)
+  ajaxCallsFile.signInAjaxCall(dataToSend)   // console.log(dataToSend)
+    .then(userInterfaceFile.signInUserInterfaceSuccess)     //.then(console.log)
     .then(() => onGetAllExamples(event))
-
-    // .catch(console.log)
-    .catch(userInterfaceFile.signInUserInterfaceFailure)
+    .catch(userInterfaceFile.signInUserInterfaceFailure)     // .catch(console.log)
 }
 
 const onSignOut = function () {
@@ -45,7 +40,7 @@ const onSignOut = function () {
 }
 
 const onChangePassword = function (e) {
-  e.preventDefault()
+  e.preventDefault() // standard for this procedure
 
   const dataInTheForm = getFormFields(event.target)
   ajaxCallsFile.changePasswordAjaxCall(dataInTheForm)
